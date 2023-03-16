@@ -27,16 +27,15 @@ function PhoneDetails({phoneList}) {
   const {name, manufacturer, description, color, price, screen, processor, ram, imageFileName} = phoneDetails;
 
   return (
-    <div className='itemDetails'>
-      <h1>Hola</h1>
+    <div className='itemDetails container'>
+      <h1>{name}</h1>
       <img src={imageFileName} alt={name}/>
-      <h2>{name}</h2>
-      <p>{description}</p>
+      <h2>{description}</h2>
       <p>{manufacturer}</p>
-      <p>{price}</p>
-      <p>{processor} {ram}</p>
-      <p>{screen}</p>
-      <p>{color}</p>
+      <p className="price">{price}</p>
+      <p className="specs">{processor} {ram}</p>
+      <p className="specs">{screen}</p>
+      <p className="specs">{color}</p>
     </div>
   );
 }

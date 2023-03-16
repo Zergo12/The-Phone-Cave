@@ -6,15 +6,15 @@ function Navbar({phoneList}) {
   console.log (phoneList) 
   return (
     <nav>
-      <Link to="/">
-        <button>Home</button>
-      </Link>
+  <Link to="/" className="active">
+  <button>Home</button>
+  </Link>
 
-    {phoneList.map((phone) => {
-      return  <Link to={`/phoneDetails/${phone.id}`} key={phone.id}>
-      {phone.name}
-      </Link>      
-    })}
+  {phoneList.map((phone) => {
+    return <Link to={`/phoneDetails/${phone.id}`} key={phone.id} activeClassName="active">
+    {phone.name}
+  </Link>      
+  })}
 
     </nav>
   );
